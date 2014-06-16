@@ -237,6 +237,56 @@ sub stable_id {
   return $self->{stable_id};
 }
 
+=head2 cell_type_count
+
+  Arg [1]    : (optional) scalar - cell_type_count 
+  Example    : my $cell_type_count = $feature->cell_type_count();
+  Description: Getter and setter for the cell_type_count attribute for this feature. 
+  Returntype : string
+  Exceptions : None
+  Caller     : General
+  Status     : At risk - setter functionality to be removed
+
+=cut
+
+sub cell_type_count {
+  my $self = shift;
+
+  if (@_){
+    #added v67
+    warn "RegualtoryFeature::cell_type_count setter functionality is being removed\n";
+    #Still used in cell_type_count_mapper.pl
+    $self->{cell_type_count} = shift;
+  }
+
+  return $self->{cell_type_count};
+}
+
+=head2 has_evidence
+
+  Arg [1]    : (optional) boolean
+  Example    : my $has_evidence = $feature->has_evidence();
+  Description: Getter and setter for the has_evidence attribute for this feature. 
+  Returntype : string
+  Exceptions : None
+  Caller     : General
+  Status     : At risk - setter functionality to be removed
+
+=cut
+
+sub has_evidence {
+  my $self = shift;
+
+  if (@_){
+    #added v67
+    warn "RegualtoryFeature::has_evidence setter functionality is being removed\n";
+    #Still used in has_evidence_mapper.pl
+    $self->{has_evidence} = shift;
+  }
+
+  return $self->{has_evidence};
+}
+
 
 =head2 regulatory_attributes
 
